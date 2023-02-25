@@ -1,4 +1,3 @@
-#Data structures and algorithms
 <html lang="en">
 <head>
     <meta charset="UTF-8">
