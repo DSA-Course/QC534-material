@@ -1,0 +1,266 @@
+
+\documentclass[a4paper, 11pt, oneside]{book} % A4 paper size, default 11pt font size and oneside for equal margins
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} % Generic dummy publisher logo
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{document} 
+
+\begin{titlepage} % Suppresses headers and footers on the title page
+
+	\centering % Centre everything on the title page
+	
+	\scshape % Use small caps for all text on the title page
+	
+	\vspace*{\baselineskip} % White space at the top of the page
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal rule
+	\rule{\textwidth}{0.4pt} % Thin horizontal rule
+	
+	\vspace{0.75\baselineskip} % Whitespace above the title
+	
+	{\LARGE Data structures\\ and\\ Algorithms\\} % Title
+	
+	\vspace{0.75\baselineskip} % Whitespace below the title
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
+	\rule{\textwidth}{1.6pt} % Thick horizontal rule
+	
+	\vspace{2\baselineskip} % Whitespace after the title block
+	
+	%------------------------------------------------
+	%	Subtitle
+	%------------------------------------------------
+	
+	Note02-Sorting problem (Insertion/Merg sort)% Subtitle or further description
+	
+	\vspace*{3\baselineskip} % Whitespace under the subtitle
+	
+	%------------------------------------------------
+	%	Editor(s)
+	%------------------------------------------------
+	
+	Edited By
+	
+	\vspace{0.5\baselineskip} % Whitespace before the editors
+	
+	{\scshape\Large Arshia Gharooni \\} % Editor list
+	
+	\vspace{0.5\baselineskip} % Whitespace below the editor list
+	
+	\textit{The University of central Tehran branch \\ Tehran} % Editor affiliation
+	
+	\vfill % Whitespace between editor names and publisher logo
+	
+	%------------------------------------------------
+	%	Publisher
+	%------------------------------------------------
+	
+	
+	
+	\vspace{0.3\baselineskip} % Whitespace under the publisher logo
+	
+	2023 % Publication year
+
+\end{titlepage}
+
+\section{Introduction}
+
+Sorting is the process of arranging a collection of items in a specific order, usually ascending or descending. Sorting is one of the most fundamental operations in computer science and is used in a wide range of applications, including data processing, searching, and machine learning.
+
+Sorting algorithms are the algorithms that sort a given set of data into a specific order. There are various sorting algorithms available, each with its own advantages and disadvantages. In this lecture note, we will discuss the two popular sorting algorithms: Insertion Sort and Merge Sort.
+
+\section{Insertion Sort}
+
+Insertion Sort is a simple and efficient sorting algorithm that works by inserting each item in the proper place in a sorted sequence. Insertion Sort is a good choice for small arrays or for arrays that are mostly sorted, as it has a low overhead and performs well in these situations.
+
+In this lecture note, we will discuss Insertion Sort in detail, including its algorithm, time complexity, space complexity, advantages, and disadvantages.
+
+\subsection{Insertion Sort Algorithm}
+
+The basic idea behind Insertion Sort is to divide the array into two parts: a sorted part and an unsorted part. Initially, the sorted part contains only the first element of the array, and the unsorted part contains the rest of the elements. The algorithm then iterates over the unsorted part, taking each element in turn and inserting it into the proper place in the sorted part.
+
+\vspace{0.75\baselineskip} % Whitespace below the title
+
+The pseudocode for Insertion Sort is as follows:
+
+\begin{verbatim}
+
+for i = 1 to n-1
+   j = i
+   while j > 0 and array[j-1] > array[j]
+      swap array[j] and array[j-1]
+      j = j - 1
+      
+\end{verbatim}
+
+
+Let's break down the algorithm into steps:
+
+\begin{enumerate}
+  \item Starting from the second element of the array, iterate over the unsorted part of the array.
+  \item Take the current element and compare it with the elements in the sorted part of the array.
+  \item Move the larger elements one position to the right to make room for the current element.
+  \item Insert the current element in the proper place in the sorted part of the array.
+  \item Repeat steps 2 to 4 for all elements in the unsorted part of the array.
+\end{enumerate}
+
+
+\subsection{Time Complexity of Insertion Sort}
+
+The time complexity of Insertion Sort is O(n2) in the worst case, where n is the number of elements in the array. This is because the algorithm needs to compare each element in the unsorted part of the array with each element in the sorted part of the array.
+
+In the best case, when the array is already sorted, the time complexity of Insertion Sort is O(n), as the algorithm only needs to compare each element with its predecessor and do no swaps.
+
+In the average case, the time complexity of Insertion Sort is also O(n2), as the array is usually not sorted and the algorithm needs to perform many comparisons and swaps.
+
+\subsection{Space Complexity of Insertion Sort}
+
+The space complexity of Insertion Sort is O(1), as the algorithm does not use any extra space apart from the input array.
+
+\subsection{Advantages of Insertion Sort}
+
+\begin{enumerate}
+  \item Simple and easy to implement: Insertion Sort is one of the simplest sorting algorithms to implement and understand, making it a good choice for small programs or teaching purposes.
+  \item Low overhead: Insertion Sort has a low overhead, as it does not use any extra space apart from the input array.
+  \item Good for small arrays or mostly sorted arrays: Insertion Sort performs well on small arrays or arrays that are mostly sorted, as it does not need to perform many comparisons and swaps.
+\end{enumerate}
+
+\subsection{Disadvantages of Insertion Sort}
+\begin{enumerate}
+  \item Slow for large arrays: Insertion Sort has a time complexity of O(n2), which makes it slow for large arrays.
+  \item Not suitable for complex data structures: Insertion Sort is not suitable for complex data structures, such as trees or graphs, as it requires a linear data structure
+\end{enumerate}
+
+\subsection{Improvements to Insertion Sort}
+
+Although Insertion Sort is not suitable for large arrays or complex data structures, there are several improvements that can be made to the algorithm to make it more efficient.
+
+\begin{enumerate}
+  \item Binary Insertion Sort: Binary Insertion Sort is a variation of Insertion Sort that uses binary search to find the proper position for each element in the sorted part of the array, reducing the number of comparisons required.
+  \item Shell Sort: Shell Sort is a generalization of Insertion Sort that divides the array into smaller subarrays and applies Insertion Sort to each subarray, reducing the number of comparisons required.
+  \item Comb Sort: Comb Sort is a variation of Insertion Sort that uses a larger gap between elements to compare, reducing the number of swaps required.
+\end{enumerate}
+
+\section{Merg Sort} 
+Merge Sort is a widely used sorting algorithm that uses a divide-and-conquer approach to sort an array of elements. In Merge Sort, the array is divided into two halves, each half is recursively sorted, and then the two sorted halves are merged to produce the final sorted array.
+\vspace{0.75\baselineskip} % Whitespace below the title
+In this lecture note, we will discuss Merge Sort in detail, including its algorithm, time complexity, space complexity, advantages, and disadvantages.
+
+\subsection{Merge Sort Algorithm}
+The Merge Sort algorithm consists of two main steps: divide and conquer. In the divide step, the array is divided into two halves, and each half is recursively sorted using the same algorithm. In the conquer step, the two sorted halves are merged together to produce the final sorted array.
+\vspace{0.75\baselineskip} % Whitespace below the title
+The pseudocode for Merge Sort is as follows:
+
+\begin{verbatim}
+
+function merge_sort(array)
+   if length(array) <= 1
+      return array
+   else
+      middle = length(array) / 2
+      left_half = merge_sort(array[0:middle])
+      right_half = merge_sort(array[middle:length(array)])
+      return merge(left_half, right_half)
+      
+function merge(left_half, right_half)
+   result = []
+   i = 0
+   j = 0
+   while i < length(left_half) and j < length(right_half)
+      if left_half[i] < right_half[j]
+         result.append(left_half[i])
+         i = i + 1
+      else
+         result.append(right_half[j])
+         j = j + 1
+   result.extend(left_half[i:])
+   result.extend(right_half[j:])
+   return result
+      
+\end{verbatim}
+
+Let's break down the algorithm into steps:
+
+\begin{enumerate}
+  \item Check if the length of the array is less than or equal to 1. If it is, return the array as it is already sorted.
+  \item Divide the array into two halves, using the middle index.
+  \item Recursively call Merge Sort on each half of the array.
+  \item Merge the two sorted halves using the Merge function.
+  \item Return the sorted array.
+\end{enumerate}
+
+\vspace{0.75\baselineskip} % Whitespace below the title
+
+The Merge function takes two sorted arrays as input and produces a single sorted array as output. The function works by iterating over the elements of the two arrays and inserting them in the proper order in a new array.
+
+\subsection{Time Complexity of Merge Sort}
+The time complexity of Merge Sort is O(n log n) in the worst, best, and average cases, where n is the number of elements in the array. This is because the array is recursively divided into halves until the base case is reached, resulting in a logarithmic number of divisions. The merge operation takes linear time, as each element is compared only once and inserted into the result array.
+
+\subsection{Space Complexity of Merge Sort}
+The space complexity of Merge Sort is O(n), where n is the number of elements in the array. This is because the algorithm creates a temporary array of the same size as the input array to store the result of the merge operation.
+
+\subsection{Advantages of Merge Sort}
+\begin{enumerate}
+  \item Efficient for large arrays: Merge Sort is efficient for large arrays as its time complexity is O(n log n).
+  \item Stable Sorting: Merge Sort is a stable sorting algorithm, which means that the order of equal elements is preserved during the sorting process.
+  \item Suitable for linked lists: Merge Sort is suitable for linked lists as it does not require random access to elements in the array.
+\end{enumerate}
+
+\subsection{Disadvantages of Merge Sort}
+\begin{enumerate}
+  \item Space complexity: Merge Sort has a space complexity of O(n), which can be a disadvantage for systems with limited memory.
+  \item Recursive: Merge Sort is a recursive algorithm, which means that it requires additional overhead to manage the recursive calls. This can be a disadvantage in certain situations.
+  \item Not in-place: Merge Sort requires additional memory to store the result of the merge operation. This can be a disadvantage in situations where memory is limited.
+\end{enumerate}
+
+\subsection{Improvements to Merge Sort}
+
+Although Merge Sort is a highly efficient sorting algorithm, there are several improvements that can be made to the algorithm to make it even more efficient.
+\vspace{0.75\baselineskip}
+
+\begin{enumerate}
+  \item Iterative Merge Sort: Iterative Merge Sort is a variation of Merge Sort that uses an iterative approach instead of a recursive approach. This can reduce the overhead of managing recursive calls.
+  \item In-Place Merge Sort: In-Place Merge Sort is a variation of Merge Sort that performs the merge operation in-place, without requiring additional memory. This can be useful in situations where memory is limited.
+  \item Hybrid Merge Sort: Hybrid Merge Sort is a variation of Merge Sort that uses a combination of Merge Sort and another sorting algorithm, such as Insertion Sort or Quick Sort, to improve efficiency.
+\end{enumerate}
+
+\section{Divide and Conquer}
+
+Divide and Conquer is a problem-solving technique that involves breaking down a problem into smaller subproblems, solving each subproblem recursively, and then combining the results of each subproblem to solve the original problem. This technique is used in a wide range of algorithms, including sorting algorithms, searching algorithms, and algorithms for mathematical problems such as matrix multiplication.
+
+\subsection{The Divide and Conquer Process}
+The Divide and Conquer process consists of three main steps: Divide, Conquer, and Combine.
+\begin{enumerate}
+  \item Divide: The first step is to divide the problem into smaller subproblems that are easier to solve. This is done by breaking the problem down into smaller pieces, often recursively, until the subproblems are small enough to be solved directly.
+  \item Conquer: The second step is to solve each subproblem recursively. This is done by applying the same algorithm to each subproblem, which should be easier to solve than the original problem.
+  \item Combine: The final step is to combine the results of each subproblem to solve the original problem. This is done by merging the results of each subproblem, often in a specific order or pattern.
+\end{enumerate}
+
+\vspace{0.75\baselineskip}
+
+
+
+\subsection{Examples of Divide and Conquer Algorithms}
+
+\begin{enumerate}
+  \item Merge Sort: Merge Sort is a sorting algorithm that uses the Divide and Conquer technique to sort an array of elements. It works by dividing the array into two halves, recursively sorting each half, and then merging the two sorted halves together.
+  \item Quick Sort: Quick Sort is another sorting algorithm that uses the Divide and Conquer technique. It works by selecting a pivot element from the array, dividing the array into two subarrays based on the pivot element, recursively sorting each subarray, and then combining the results.
+  \item Binary Search: Binary Search is a searching algorithm that uses the Divide and Conquer technique to find a target element in a sorted array. It works by dividing the array in half, comparing the target element to the middle element, and recursively searching either the left or right half of the array based on the comparison result.
+\end{enumerate}
+
+\vspace{0.75\baselineskip}
+
+
+\end{document}
