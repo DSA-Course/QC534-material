@@ -4,7 +4,7 @@
 </head>
 <body>
     <h1>Data structures and algorithms</h1>
-    <p>Tutor: Dr.Hajiesmaeili</p>
+    <p>Instructor: Dr.Hajiesmaeili</p>
     <p>Head TA: Arshia Gharooni</p>
 </body>
 </html>
