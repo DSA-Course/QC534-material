@@ -10,6 +10,9 @@
 <br>
 <br>
 <h5 align="center">Recommended study material</h5>
+<p align="center">These notebooks are just arbitrary and they may be incomplete and they are some type of summary for each part of the lesson</p>
+<br>
+<br>
 <p align="center">
   <a href="#Recommended-books">Books</a> •
   <a href="#Recommended-courses">Courses</a> •
