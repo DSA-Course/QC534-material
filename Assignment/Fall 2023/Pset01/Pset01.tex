@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\input{etc/cmd}
+
+
+\begin{document}
+\fontsize{12pt}{14pt}\selectfont
+\input{etc/head}
+
+
+\section{سوال اول}
+رای هر گروه از توابع، توابع را به ترتیب افزایشی از پیچیدگی $asymptotic (big-O)$ مرتب کنید.
+
+\begin{enumerate}
+  \item \begin{itemize}
+          \item $f_1(n) = n^{0.999999} \cdot \log(n)$
+          \item $f_2(n) = 10000000n$
+          \item $f_3(n) = 1.000001^n$
+          \item $f_4(n) = n^2$
+        \end{itemize}
+        
+     \item \begin{itemize}
+          \item $f_1(n) = 2^{2^{1000000}}$
+          \item $f_2(n) = 2^{100000n}$
+          \item $f_3(n) = \binom{2}{n}$
+          \item $f_4(n) = n\sqrt{n}$
+        \end{itemize}
+\end{enumerate}
+
+\section{سوال دوم}
+می خواهیم در رشته ای از حروف کوچک انگلیسی، بلندترین زیر رشته ای که در آن هیچ حرفی دو بار تکرار نشده است را پیدا کنیم. شبه کدی بنویسید که این کار را در مرتبه $O(n)$ انجام دهد.(برای راحتی می توانید فرض کنید که رشته به صورت آرایه ای از اعداد ٠ تا ٢۵ به شما داده شده است)
+
+
+\section{سوال سوم}
+اگر ماتریس $n*n$ از اعداد داشته باشیم، آیا الگوریتمی وجود دارد که بتواند $peak$ را بیابد ($peak$ در یک ماتریس مکانی با ویژگی است که چهار همسایه آن (شمال، جنوب، شرق و غرب) مقدار کمتر یا مساوی از آن مکان دارند.)
+
+\begin{enumerate}
+  \item در $O(n)$؟
+  \item در $O(n log(n))$؟
+  \item در $O(n^2)$؟
+\end{enumerate}
+
+در هر یک از موارد بالا در صورت وجود $pseudocode$ الگوریتم را بنویسید در غیر این صورت بگویید چرا ممکن نیست.
+
+
+
+
+
+
+
+\section{سوال چهارم}
+فرض کنید توابع $f(n)$ و $g(n)$ دو تابع غیر منفی باشند. با استفاده از نماد $\theta$ در حالت پایه اثبات کنید که:
+
+\begin{itemize}
+          \item \max(f(n),g(n)) = \Theta(f(n), g(n))
+\end{itemize}
+
+\section{سوال پنجم}
+توضیح دهید که چرا عبارت "زمان اجرای الگوریتمی حداقل $O(n^2)$ است." معنی ندارد.
+
+
+
+\end{document}
