@@ -5,7 +5,8 @@
   <br>
 </h1>
 
-<h3 align="center">Instructor: <a href="https://ir.linkedin.com/in/dr-maryam-hajiesmaeili-90930743" target="_blank">Dr.Hajiesmaeili</a></h4>
+<h3 align="center">CS Instructor: <a href="https://ir.linkedin.com/in/dr-maryam-hajiesmaeili-90930743" target="_blank">Maryam Hajiesmaili, Ph.D</a></h4>
+<h3 align="center">CE Instructor: <a href="https://scholar.google.com/citations?user=_qoCtm8AAAAJ&hl=en">Reza Vaziri, Ph.D</a></h4>
 <h4 align="center"> Head TA: <a href="https://arshia-gharooni.github.io/" target="_blank">Arshia Gharooni</a></h4>
 <br>
 <br>
