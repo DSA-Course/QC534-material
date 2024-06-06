@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  Data structures and algorithms
+  QC534: Data Structures and Algorithms - Course Material Repository
   <br>
 </h1>
 
